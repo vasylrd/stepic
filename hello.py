@@ -10,4 +10,4 @@ if __name__ == '__main__':
         pass
 
     dc = {'QUERY_STRING': 'a=1&b=2&c=3'}
-    print(application(dc, test))
+    print(app(dc, test))
