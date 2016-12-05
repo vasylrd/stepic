@@ -5,8 +5,8 @@ sudo /etc/init.d/nginx restart
 # run gunicorn - app = /home/box/web/hello.py 
 cd /home/box/web && gunicorn -b 0.0.0.0:8080 hello:app &
 # check work
-curl -I 127.0.0.1
-curl -I 127.0.0.1:8080
+#curl -I 127.0.0.1
+#curl -I 127.0.0.1:8080
 #############################################
 #sudo rm -rf /etc/nginx/sites-enabled/default
 # sudo ln -s /home/box/web/etc/gunicorn.conf   /etc/gunicorn.d/test
