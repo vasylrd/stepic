@@ -1,0 +1,81 @@
+usage: gunicorn [OPTIONS] APP_MODULE
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  --proxy-protocol      Enable detect PROXY protocol (PROXY mode). [False]
+  --worker-connections INT
+                        The maximum number of simultaneous clients. [1000]
+  --pythonpath STRING   A directory to add to the Python path for Django.
+                        [None]
+  -R, --enable-stdio-inheritance
+                        Enable stdio inheritance [False]
+  -k STRING, --worker-class STRING
+                        The type of workers to use. [sync]
+  --access-logfile FILE
+                        The Access log file to write to. [None]
+  --log-syslog-facility SYSLOG_FACILITY
+                        Syslog facility name [user]
+  --log-syslog          Log to syslog. [False]
+  --preload             Load application code before the worker processes are
+                        forked. [False]
+  -w INT, --workers INT
+                        The number of worker process for handling requests.
+                        [1]
+  --graceful-timeout INT
+                        Timeout for graceful workers restart. [30]
+  --keep-alive INT      The number of seconds to wait for requests on a Keep-
+                        Alive connection. [2]
+  -p FILE, --pid FILE   A filename to use for the PID file. [None]
+  -u USER, --user USER  Switch worker processes to run as this user. [1000]
+  -g GROUP, --group GROUP
+                        Switch worker process to run as this group. [1000]
+  --spew                Install a trace function that spews every line
+                        executed by the server. [False]
+  -n STRING, --name STRING
+                        A base to use with setproctitle for process naming.
+                        [None]
+  -m INT, --umask INT   A bit mask for the file mode on files written by
+                        Gunicorn. [0]
+  --limit-request-fields INT
+                        Limit the number of HTTP headers fields in a request.
+                        [100]
+  -c FILE, --config FILE
+                        The path to a Gunicorn config file. [None]
+  --access-logformat STRING
+                        The Access log format . ["%(h)s %(l)s %(u)s %(t)s
+                        "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"]
+  --log-config FILE     The log config file to use. [None]
+  --check-config        Check the configuration.. [False]
+  --proxy-allow-from PROXY_ALLOW_IPS
+                        Front-end's IPs from which allowed accept proxy
+                        requests (comma separate). [127.0.0.1]
+  --max-requests INT    The maximum number of requests a worker will process
+                        before restarting. [0]
+  --settings STRING     The Python path to a Django settings module. [None]
+  --limit-request-line INT
+                        The maximum size of HTTP request line in bytes. [4094]
+  --certfile FILE       SSL certificate file [None]
+  -D, --daemon          Daemonize the Gunicorn process. [False]
+  --error-logfile FILE, --log-file FILE
+                        The Error log file to write to. [-]
+  --log-level LEVEL     The granularity of Error log outputs. [info]
+  --log-syslog-to SYSLOG_ADDR
+                        Address to send syslog messages [udp://localhost:514]
+  --log-syslog-prefix SYSLOG_PREFIX
+                        makes gunicorn use the parameter as program-name in
+                        the syslog entries. [None]
+  -b ADDRESS, --bind ADDRESS
+                        The socket to bind. [['127.0.0.1:8000']]
+  --limit-request-field_size INT
+                        Limit the allowed size of an HTTP request header
+                        field. [8190]
+  -t INT, --timeout INT
+                        Workers silent for more than this many seconds are
+                        killed and restarted. [30]
+  --debug               Turn on debugging in the server. [False]
+  --keyfile FILE        SSL key file [None]
+  --backlog INT         The maximum number of pending connections. [2048]
+  --logger-class STRING
+                        The logger you want to use to log events in gunicorn.
+                        [simple]
