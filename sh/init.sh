@@ -3,7 +3,7 @@ sudo ln -sf /home/box/web/etc/default /etc/nginx/sites-enabled/default
 sudo nginx -t
 sudo /etc/init.d/nginx restart
 # run gunicorn
-sudo ln -sf /home/box/web/etc/django_gunicorn_config.py /et/gunicorn.d/ask
+sudo ln -sf /home/box/web/etc/django_gunicorn_config.py /etc/gunicorn.d/ask
 sudo /etc/init.d/gunicorn restart
 
 gunicorn -c /home/box/web/etc/hello_gunicorn_config.py hello:app --daemon
